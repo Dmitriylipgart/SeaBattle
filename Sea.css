@@ -1,0 +1,15 @@
+parseGuess = function (guess) {
+    var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+
+if (guess === null || guess.length != 2){
+alert('Введите букву ряда и цифру колонки, соответствующие координатам выстрела')
+} else {
+      var row = alphabet.indexOf(guess.charAt(0));
+      var column = guess.charAt(1);
+if (isNaN(column) || column >= model.boardSize || row < 0 ) {
+alert('Введите букву ряда и цифру колонки, соответствующие координатам выстрела');
+}
+return row + column;
+}
+return false;
+}
